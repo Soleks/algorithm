@@ -1,5 +1,5 @@
-#ifndef STACK_H
-#define STACK_H
+#ifndef SCTACK_H
+#define SCTACK_H
 
 #include "Oleksenko_Sergey_Lesson_5.h"
 #include <stdlib.h>
