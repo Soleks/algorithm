@@ -1,3 +1,3 @@
 #include "Stack.h"
 
-SCtack* DecToBin(int value);
+SStack* DecToBin(int value);

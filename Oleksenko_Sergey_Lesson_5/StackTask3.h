@@ -6,7 +6,7 @@
 
 struct SCtack
 {
-	char* ch;
+	char* p;
 	int ind;
 	int max_num;
 };
@@ -14,6 +14,6 @@ struct SCtack
 struct SCtack* stack_new(const unsigned num);
 void stack_delete(struct SCtack* stack);
 void stack_push(struct SCtack* stack, const char value);
-int stack_pop(struct SCtack* stack);
+char stack_pop(struct SCtack* stack);
 
 #endif

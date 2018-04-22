@@ -1,8 +1,8 @@
 #include "Task1.h"
 
-SCtack* DecToBin(int value)
+SStack* DecToBin(int value)
 {
-	struct SCtack* stack = stack_new(100);
+	struct SStack* stack = stack_new(100);
 
 	if (stack == NULL)
 	{

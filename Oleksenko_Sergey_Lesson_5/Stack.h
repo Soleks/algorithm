@@ -4,16 +4,16 @@
 #include "Oleksenko_Sergey_Lesson_5.h"
 #include <stdlib.h>
 
-struct SCtack
+struct SStack
 {
 	int* p;
 	int ind;
 	int max_num;
 };
 
-struct SCtack* stack_new(const unsigned num);
-void stack_delete(struct SCtack* stack);
-void stack_push(struct SCtack* stack, const int value);
-int stack_pop(struct SCtack* stack);
+struct SStack* stack_new(const unsigned num);
+void stack_delete(struct SStack* stack);
+void stack_push(struct SStack* stack, const int value);
+int stack_pop(struct SStack* stack);
 
 #endif

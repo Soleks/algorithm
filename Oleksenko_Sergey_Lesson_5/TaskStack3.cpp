@@ -11,7 +11,7 @@ struct SCtack* stack_new(const unsigned num)
 		return NULL;
 	}
 
-	stack->ch = (char*)malloc(sizeof(char));
+	stack->p = (char*)malloc(sizeof(char));
 	stack->ind = -1;
 	stack->max_num = num;
 
@@ -42,7 +42,7 @@ void stack_push(struct SCtack* stack, const char value)
 	stack->p[stack->ind] = value;
 }
 
-int stack_pop(struct SCtack* stack)
+char stack_pop(struct SCtack* stack)
 {
 	if (stack->ind >= 0)
 	{
@@ -51,5 +51,5 @@ int stack_pop(struct SCtack* stack)
 		return stack->p[stack->ind + 1];
 	}
 
-	return 0;
+	return '\n';
 }
