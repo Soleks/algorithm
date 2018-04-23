@@ -1,30 +1,47 @@
 #include "Task3.h"
 
-SCtack* save_squence(char* str)
+void check_squence(char* str)
 {
-	SCtack* stack = stack_new(100);
+	SCtack* stack = cstack(strlen(str));
+	bool balance = true;
+	unsigned int i = 0;
 
 	if (stack == NULL)
 	{
 		printf("Out of memory: function: %s, line: %d\n", __FUNCTION__, __LINE__);
 	}
 
-	for (unsigned int i = 0; i < strlen(str); i++)
+	while (balance &&  i < strlen(str))
 	{
-		stack_push(stack,str[i]);
+		char ch = str[i];
+		++i;
+
+		if (ch == '{' || 
+			ch == '(' || 
+			ch == '[' || 
+			ch == '<')
+		{
+			stack_push(stack, ch);
+		}
+		else if (ch == '}' || 
+				ch == ')' || 
+				ch == ']' || 
+				ch == '>')
+		{
+			stack_pop(stack);
+		}
+		else
+		{
+			balance = false;
+		}
 	}
 
-	printf("%c\n", stack_pop(stack));
-	printf("%c\n", stack_pop(stack));
-	printf("%c\n", stack_pop(stack));
-	printf("%c\n", stack_pop(stack));
-	printf("%c\n", stack_pop(stack));
-	printf("%c\n", stack_pop(stack));
-
-	return stack;
-}
-
-ReturnT check_squence(char* str, SCtack* stack)
-{
-	return BadSquence;
+	if (balance && stack->ind == -1)
+	{
+		printf("balanced\n");
+	}
+	else
+	{
+		printf("not balanced\n");
+	}
 }

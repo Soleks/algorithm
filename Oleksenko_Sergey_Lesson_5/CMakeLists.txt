@@ -9,7 +9,7 @@ add_executable (OleksenkoSergeyLesson5
 	"Stack.cpp" "Stack.h" 
 	"Task1.cpp" "Task1.h" 
 	"Task2.h" "Task2.cpp" 
-	"Task3.h" "Task3.cpp"
-	"StackTask3.h" "TaskStack3.cpp")
+	"StackTask3.h" "TaskStack3.cpp"
+	"Task3.h" "Task3.cpp")
 
 # TODO: Добавьте тесты и целевые объекты, если это необходимо.

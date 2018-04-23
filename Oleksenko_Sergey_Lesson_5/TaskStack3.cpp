@@ -1,6 +1,6 @@
 #include "StackTask3.h"
 
-struct SCtack* stack_new(const unsigned num)
+struct SCtack* cstack(const unsigned num)
 {
 	struct  SCtack* stack = (struct SCtack*) malloc(sizeof(struct SCtack));
 
@@ -11,7 +11,7 @@ struct SCtack* stack_new(const unsigned num)
 		return NULL;
 	}
 
-	stack->p = (char*)malloc(sizeof(char));
+	stack->p = (char*)malloc(sizeof(char) * num);
 	stack->ind = -1;
 	stack->max_num = num;
 
@@ -51,5 +51,5 @@ char stack_pop(struct SCtack* stack)
 		return stack->p[stack->ind + 1];
 	}
 
-	return '\n';
+	return '\0';
 }
