@@ -1,0 +1,1 @@
+void find(struct STree * tree, unsigned int);
